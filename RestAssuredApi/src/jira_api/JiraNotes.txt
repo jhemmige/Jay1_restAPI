@@ -1,0 +1,35 @@
+Jira Notes
+Terminal Command
+
+/Users/jayashreehemmige/Documents/atlassian-jira-software-8.14.0-standalone/bin/startup.sh
+/Users/jayashreehemmige/Documents/atlassian-jira-software-8.14.0-standalone/bin/shutdown.sh
+
+https://www.youtube.com/watch?v=cXLWq5mYYPQ - watch this video for step by step Jira installation
+
+http://localhost:8080/secure/WelcomeToJIRA.jspa.
+This will initially throw error since since JIRA is not actually "Setup". 
+To "setup" jira, we actually open a folder ( in desktop or in any other spot of interest), get the file back and feed it to jira-application.properties txt file in 
+Web-INF folder
+so, it should be in  /Users/jayashreehemmige/Documents/atlassian-jira-software-8.14.0-standalone/atlassian-jira/WEB-INF/classes/jira-application.properties ( currently 
+already created) .
+
+Now, open terminal  enter this command /Users/jayashreehemmige/Documents/atlassian-jira-software-8.14.0-standalone/bin/startup.sh > go to localhost 8080 >
+again hit /Users/jayashreehemmige/Documents/atlassian-jira-software-8.14.0-standalone/bin/startup.sh > go to locahost8080 to actually open JIRA. ( create USERID/PWD)
+
+
+on POSTMAND use
+
+http://localhost:8080/rest/auth/1/session in POST 
+{ "username": "hemmige.jayashree", "password": "Krom123$12" } in the BODY with json.
+
+you may either use ID obtained from http://localhost:8080/rest/auth/1/session  OR create an api token from here 
+https://id.atlassian.com/manage-profile/security/api-tokens ( you can revoke the API token if used) . This is basically used in Basic auth of Postman.
+
+https://docs.atlassian.com/software/jira/docs/api/REST/7.6.1/#api/2/issue-addComment - This is a cheat sheet 
+Creating an issue : https://developer.atlassian.com/server/jira/platform/jira-rest-api-examples/#creating-an-issue-examples
+https://developer.atlassian.com/cloud/jira/platform/rest/v2/api-group-issues/#api-rest-api-2-issue-post - list of apis
+
+Deleting an issue : http://localhost:8080/rest/api/2/issue/10003
+
+Path Parameter will be in curly braces.
+Query parameter is in ? mark.

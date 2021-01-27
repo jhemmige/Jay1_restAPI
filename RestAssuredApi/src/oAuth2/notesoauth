@@ -1,0 +1,39 @@
+way to construction file :
+
+
+1. Using the OAuth 2.0 Contract Details: (saved in Documents> restapi>oauth)
+First, we construct the end point where we can obtain authorization URL. Refer to GETCODE URL IN POSTMAN.
+Plug the getcode url into a browser 
+Next, choose the email that we need to use to loginto that specific site . it leads to blank page witth a specific url is the browser. This will give out the auth code
+https://rahulshettyacademy.com/getCourse.php?state=verifyfjdss&code=4%2F0AY0e-g7sLJ4wW7AtRvN5do85zqycPQX7jMN3JF45je4YQAVkolPRZG2WL7Qr3A-ElXh2Lg&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=4&prompt=none#
+next, use the code into exchangecode and choose HTTP request as POST and click send, this will give the access token. 
+https://www.googleapis.com/oauth2/v4/token?code=4%2F0AY0e-g6S_rGZFvWJ5WS_fyS50AMeIqePlHjflgf7RoDzybgroIRXRTdWh3uo9SMw52fwcQ&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&client_secret=erZOWM9g3UtwNRj340YYaK_W&redirect_uri=https://rahulshettyacademy.com/getCourse.php&grant_type=authorization_code
+
+Use this access token in actual request
+https://rahulshettyacademy.com/getCourse.php?access_token=ya29.a0AfH6SMBfDnPnZLpzcvFHkHRKOpbF6zOnXCCQCR2sWAS5IGtq3ouE_1glq9vIZccu55mLtdTOezd-1MSkUiSa8kbjKOP8BsKvJT42k82Wn889VA696ZWY-qiyb99c1wmrNbaIfrFt6Nyhvah_w6Buk_lA5NFZnwuTcS7kUqz0bLI
+
+https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type
+
+Why do applications rely on other applications for authorization like Google, Facebook, linkedIn etc. 
+1. No data breach 
+2. No need to maintain client profile data on their server.
+3. Let's say customer needs to get Hotel, Cab and flight booking, they dont need to signup multiple times across different application. Instead they can 
+authorize one application for a common login. 
+
+Parts of Oauth API - 
+Client - application that needs to be served. 
+Client ID- unique ID that recognizes the client which is public
+Client SecretID - Private code 
+resource owner is a Human
+Resource/Authorization server - server that authorizes the interaction from client for eg: Google, FB
+
+
+There are different types of grant type - Authorization code 
+Client credentials 
+Client Credentials :
+0auth 2.0  is industry standards security protocol
+Authorization_code has Human interaction.
+Client Credentials do not have Human Interaction
+Authorization code has many layers of security
+Grant_type -Client_credentials if the interaction is between application and server with no users involved.
+For eg: I want to bring in courses available on RahulShetty, then I don't need to use Auth code since I will be using my own resources to bring data. Bring my own data
