@@ -30,6 +30,8 @@ public class oAuth {
 //String actualResponse=		given().log().all().queryParam("access_token", xchangeCodeAccesstoken).when().get("https://rahulshettyacademy.com/getCourse.php")
 //		.then().log().all().extract().response().asString();
 		
+		System.out.println("THis is yahoo");
+		
 		
 	}
 	
