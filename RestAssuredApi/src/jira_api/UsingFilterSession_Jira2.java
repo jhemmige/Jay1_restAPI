@@ -89,6 +89,7 @@ JsonPath jps= new JsonPath(getRes);
 int commentSize=	jps.get("fields.comment.size()");
 
 System.out.println(commentSize);
+System.out.println("This is the value3-jayashree3");
 	}
 
 

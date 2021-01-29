@@ -10,6 +10,7 @@ public class newoAuthPractise {
 		WebDriver driver =new ChromeDriver();
 		
 		driver.get("https://finance.yahoo.com/");
+		System.out.println("This is the value4-jayashree4");
 
 	}
 
