@@ -32,7 +32,7 @@ public class Jira1 {
 		String val = jp.get("session.value");
 
 		System.out.println("This is the  " + val);
-		
+		System.out.println("This is the value-jayashree");
 		//CREATING A NEW ISSUE
 	String response=	given().log().all().headers("Cookie", "JSESSIONID=" +val).headers("Content-Type", "application/json").body("{\n"
 				+ "    \"fields\": {\n"
