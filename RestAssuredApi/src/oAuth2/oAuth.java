@@ -4,6 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class oAuth {
 	
+public void newmethod1() {
+		
+		System.out.println("this is a new test method created for github testing");
+	}
 	
 	public  static void  main(String[] args)throws InterruptedException {
 		

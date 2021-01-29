@@ -16,6 +16,12 @@ import io.restassured.path.json.JsonPath;
 
 public class UsingFilterSession_Jira2 {
 	
+public void newmethod() {
+		
+		System.out.println("this is a new test method created for github testing");
+	}
+
+	
 	@Test
 	
 public void createNewIssueWithSessionFilter() {
