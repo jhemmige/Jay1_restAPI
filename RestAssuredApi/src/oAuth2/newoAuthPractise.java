@@ -19,6 +19,11 @@ public class newoAuthPractise {
 
 	}
 	
+public void newermethod() {
+		
+		System.out.println("this is a new test method created for github testing");
+	}
+
 	
 
 }
